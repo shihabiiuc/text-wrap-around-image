@@ -21,6 +21,15 @@ h3 {
   text-align: center;
 }
 
+p.warning {
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 0.9em;
+  color: #FFC600;
+  background-color: #193549;
+  text-align: center;
+}
+
 .example-1 {
   padding: 90px 15px;
   background-color: #fff4d6;
@@ -30,11 +39,16 @@ h3 {
   margin: 0 auto;
 }
 .example-1 .content img {
-  width: 300px;
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px; /* only for development */
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .example-1 .content img {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px; /* only for development */
+  }
 }
 .example-1 .content p {
   text-align: justify;
@@ -48,12 +62,14 @@ h3 {
   max-width: 900px;
   margin: 0 auto;
 }
-.example-2 .content img {
-  width: 300px;
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px; /* only for development */
+@media (min-width: 768px) {
+  .example-2 .content img {
+    width: 300px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px; /* only for development */
+  }
 }
 .example-2 .content p {
   text-align: justify;
@@ -67,10 +83,12 @@ h3 {
   max-width: 900px;
   margin: 0 auto;
 }
-.example-3 .content img {
-  float: left;
-  width: 300px;
-  margin-right: 20px;
+@media (min-width: 768px) {
+  .example-3 .content img {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+  }
 }
 .example-3 .content p {
   text-align: justify;
@@ -90,13 +108,15 @@ h3 {
 .example-4 .content p {
   margin: 0;
 }
-.example-4 .content .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media (min-width: 768px) {
+  .example-4 .content .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .example-4 .content .row .one-third {
   -ms-flex-preferred-size: 33%;
@@ -106,8 +126,10 @@ h3 {
   -ms-flex-preferred-size: 66%;
       flex-basis: 66%;
 }
-.example-4 .content .row .two-third img {
-  width: 300px;
-  float: left;
-  margin-right: 10px;
+@media (min-width: 768px) {
+  .example-4 .content .row .two-third img {
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

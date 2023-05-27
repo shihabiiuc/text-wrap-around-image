@@ -16,6 +16,14 @@ img {
 h3 {
   text-align: center;
 }
+p.warning {
+  padding: 10px 15px;
+  margin: 0;
+  font-size: .9em;
+  color: #FFC600;
+  background-color: #193549;
+  text-align: center;
+}
 
 .example-1 {
   padding: 90px 15px;
@@ -24,11 +32,14 @@ h3 {
     max-width: 900px;
     margin: 0 auto;
     img {
-      width: 300px;
-      float: left;
-      margin-right: 20px;
-      margin-bottom: 10px;
-      margin-top: 10px; /* only for development */
+      max-width: 100%;
+      @media (min-width: 768px) {
+        width: 300px;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px; /* only for development */
+      }
     }
     p {
       text-align: justify;
@@ -42,11 +53,13 @@ h3 {
     max-width: 900px;
     margin: 0 auto;
     img {
-      width: 300px;
-      float: right;
-      margin-left: 20px;
-      margin-bottom: 10px;
-      margin-top: 10px; /* only for development */
+      @media(min-width: 768px) {
+        width: 300px;
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px; /* only for development */
+      }
     }
     p {
       text-align: justify;
@@ -60,9 +73,11 @@ h3 {
     max-width: 900px;
     margin: 0 auto;
     img {
-      float: left;
-      width: 300px;
-      margin-right: 20px;
+      @media(min-width: 768px) {
+        float: left;
+        width: 300px;
+        margin-right: 20px;
+      }
     }
     p {
       text-align: justify;
@@ -82,8 +97,10 @@ h3 {
       margin: 0;
     }
     .row {
-      display: flex;
-      justify-content: space-between;
+      @media(min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+      }
 
       .one-third {
         flex-basis: 33%;
@@ -91,9 +108,11 @@ h3 {
       .two-third {
         flex-basis: 66%;
         img {
-          width: 300px;
-          float: left;
-          margin-right: 10px;
+          @media(min-width: 768px) {
+            width: 300px;
+            float: left;
+            margin-right: 10px;
+          }
         }
       }
     }
